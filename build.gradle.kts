@@ -20,14 +20,18 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:2.1.20")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("io.mockk:mockk:1.13.2") // MockK for mocking in tests
+	testImplementation("org.assertj:assertj-core:3.24.2")  // AssertJ
+	testImplementation("org.mockito:mockito-core:5.3.1")  // Mockito עבור Mocking
+	testImplementation("org.jetbrains.kotlin:kotlin-test") // Kotlin test support
+	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 }
 
 kotlin {
